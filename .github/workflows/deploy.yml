@@ -2,7 +2,8 @@ name: Deploy
 
 on:
     push:
-        branches: [main]
+        branches:
+            - main
 
 jobs:
     deploy:
@@ -15,5 +16,5 @@ jobs:
                 node-version: 24
 
             - run: npm ci
-            - run: npm run dev
+            - run: npm run build
             
