@@ -1,0 +1,19 @@
+name: deploy
+
+on:
+    push:
+        branches: ["main"]  
+
+jobs:
+    deploy:
+        runs-on: windows-latest
+        steps: 
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@4
+              with:
+                node-version: 20
+            
+            - run: npm ci
+            - run: npm run deploy
+
+            
