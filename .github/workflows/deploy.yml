@@ -1,4 +1,4 @@
-name: Depoly
+name: depoly
 
 on:
     push:
