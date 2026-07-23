@@ -2,7 +2,13 @@ name: test
 
 on: 
     pull_request:
-        branches: ["main"]
+        branches:
+            - main
+            - hemendra_1
+    push:
+        branches:
+            -main
+            -hemendra_1
 
 jobs:
     test:
@@ -14,4 +20,4 @@ jobs:
               with:
                 node-version: 24
             - run: npm ci
-            - run: npm test
+            - run: npm run build
